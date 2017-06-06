@@ -1,4 +1,3 @@
-var loadingContext = document.getElementById('loadingCanvas').getContext('2d');
 function drawLoadingText(text) {
   var canvas = loadingContext.canvas;
 
