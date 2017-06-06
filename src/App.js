@@ -9,6 +9,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>AnVo Games</h2>
+          <h3>v0.1</h3>
         </div>
       </div>
     );
