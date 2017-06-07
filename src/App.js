@@ -4,11 +4,11 @@ import './App.css';
 import asteroids_logo from './games/asteroids/asteroids_logo.png';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.css';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 export class App extends Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
@@ -28,23 +28,43 @@ export class App extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/blog/">Blog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                <NavLink href="/assets">Assets</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/about/">About Us</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>AnVo Games</h2>
-          <h3>v0.1</h3>
+        <div style={{ height: 400 }} className="App-header">
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <h2 style={{'position': 'relative', 'top': '50%'}}>AnVo Games</h2>
         </div>
         <hr/>
         <div>
-          <a href='/asteroids'><img src={asteroids_logo}
-            width='128' height='128' alt='asteroids' target='_blank'></img></a>
+          <Grid fluid>
+            <Row>
+              <Col xs={4} md={2}>
+                <a href='/asteroids'><img src={asteroids_logo}
+                  width='128' height='128' alt='asteroids' target='_blank'></img></a>
+              </Col>
+              <Col xs={4} md={2}>
+                <a href='/asteroids'><img src={asteroids_logo}
+                  width='128' height='128' alt='asteroids' target='_blank'></img></a>
+              </Col>
+              <Col xs={4} md={2}>
+                <a href='/asteroids'><img src={asteroids_logo}
+                  width='128' height='128' alt='asteroids' target='_blank'></img></a>
+              </Col>
+            </Row>
+          </Grid>
+        </div>
+        <hr/>
+        <div className='footer'>
+          <p>AnVo Games</p>
         </div>
       </div>
     );
